@@ -1,0 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+  border-style: border-box;
+}
+
+.container {
+  background-color: #F9B9B7;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 210px;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #F06C9B;
+  padding: 20px;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  background-color: #96C9DC;
+  border: none;
+  border-radius: 5px;
+  margin: 2rem;
+  padding: 1rem;
+  font-size: larger;
+  text-align: center;
+}
+
+
