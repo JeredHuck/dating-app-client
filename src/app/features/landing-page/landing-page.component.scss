@@ -1,11 +1,11 @@
 * {
   padding: 0;
   margin: 0;
-  border-style: border-box;
+  box-sizing: border-box;
 }
 
 .container {
-  background-color: #F9B9B7;
+  background-color: #eedebf;
   min-height: 100vh;
   padding: 0;
   margin: 0;
@@ -18,20 +18,26 @@
   width: 210px;
   height: 100vh;
   overflow-y: auto;
-  background-color: #F06C9B;
+  background-color: #96C9DC;
   padding: 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .button {
   display: flex;
   flex-direction: column;
-  background-color: #96C9DC;
+  background-color: #ff94ba;
   border: none;
   border-radius: 5px;
   margin: 2rem;
   padding: 1rem;
   font-size: larger;
   text-align: center;
+}
+
+.main-body {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-left: 250px;
 }
 
 
