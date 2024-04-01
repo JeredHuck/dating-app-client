@@ -1,4 +1,18 @@
-.container {
-  display: flex;
-  flex-direction: grid;
+.grid-item {
+  background-color: #BD6B73;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+p {
+  margin-top: 10px;
+  background-color: #BBB6DF;
+  border-radius: 50%;
 }
