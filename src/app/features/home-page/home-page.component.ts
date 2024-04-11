@@ -16,7 +16,7 @@ export class HomePageComponent implements OnInit{
   constructor(private pService:ProfilesService) {}
 
   ngOnInit(): void {
-      this.pService.getProfiles().subscribe({
+      this.pService.setProfiles().subscribe({
         next: (profiles: Profile[]) => {
           this.profiles = profiles
         },

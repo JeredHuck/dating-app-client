@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Profile } from '../../shared/models/profiles';
-import { Observable } from 'rxjs';
+import { Observable, catchError, throwError } from 'rxjs';
 import { environment } from '../../../environments/environment.development';
 
 @Injectable({
@@ -11,7 +11,24 @@ export class ProfilesService {
 
   constructor(private http:HttpClient) { }
 
-  getProfiles(): Observable<Profile[]> {
+  setProfiles(): Observable<Profile[]> {
     return this.http.get<Profile[]>(`${environment.apiUrl}/profiles`)
+  }
+
+  getProfile(id: number): Observable<Profile> {
+    return this.http.get<Profile[]>(`${environment.apiUrl}/profiles/${id}`).pipe(
+      catchError(this.handleError)
+    )
+  }
+
+  updateProfile(id: number, updatedProfile: Profile): Observable<Profile> {
+    return this.http.patch<Profile[]>(`${environment.apiUrl}/profiles/${id}`, updatedProfile).pipe(
+      catchError(this.handleError)
+    )
+  }
+
+  private handleError(error: any): Observable<any> {
+    console.error('API error:', error);
+    return throwError(() => error);
   }
 }
