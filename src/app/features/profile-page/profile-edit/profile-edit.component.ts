@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProfilesService } from '../../../core/services/profiles.service';
 import { Profile } from '../../../shared/models/profiles';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-profile-edit',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './profile-edit.component.html',
   styleUrl: './profile-edit.component.scss'
 })

@@ -1,0 +1,9 @@
+<form (submit)="onSubmit()">
+  <label for="bio">Bio:</label>
+  <input type="text" id="bio" name="bio" [(ngModel)]="updatedProfile.bio">
+
+  <label for="profilePicture">Profile Picture URL:</label>
+  <input type="text" id="profilePicture" name="profilePicture" [(ngModel)]="updatedProfile.profile_picture_url">
+
+  <button type="submit">Update Profile</button>
+</form>
