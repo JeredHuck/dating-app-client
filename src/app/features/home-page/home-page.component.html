@@ -1,5 +1,12 @@
 <div class="container">
-  @for (profile of profiles; track profile.id) {
-    <app-profiles [profile]="profile"/>
+  <div class="sidebar">
+    <nav>
+      <button class="button">Sign Up</button> <!-- add pipe to sort users for potential connections -->
+      <button class="button">Login</button>
+      <button class="button">Find Love!</button>
+    </nav>
+  </div>
+  @for (user of users; track user.id) {
+    <app-users [user]="user"/>
   }
 </div>

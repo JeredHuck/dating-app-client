@@ -1,4 +1,4 @@
-import { Component, NgModule, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProfilesService } from '../../../core/services/profiles.service';
 import { Profile } from '../../../shared/models/profiles';

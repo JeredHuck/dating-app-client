@@ -13,5 +13,9 @@ export const routes: Routes = [
   {
     path: 'home',
     loadComponent: () => import("./features/home-page/home-page.component").then((c) => c.HomePageComponent)
+  },
+  {
+    path: 'edit',
+    loadComponent: () => import("./features/profile-page/profile-edit/profile-edit.component").then((c) => c.ProfileEditComponent)
   }
 ];

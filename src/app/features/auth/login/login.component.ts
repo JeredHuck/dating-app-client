@@ -19,6 +19,7 @@ export class LoginComponent {
 
   constructor(private authService: AuthenticationService,
               private router: Router) {}
+
   login() {
     if(this.loginForm.valid) {
       const username = this.loginForm.value.username;

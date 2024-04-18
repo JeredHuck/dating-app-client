@@ -1,27 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { ProfilesService } from '../../core/services/profiles.service';
 import { Profile } from '../../shared/models/profiles';
-import { ProfilesComponent } from '../../components/profiles/profiles.component';
+import { UsersService } from '../../core/services/users.service';
+import { User } from '../../shared/models/user';
+import { UsersComponent } from '../../components/users/users.component';
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [ProfilesComponent],
+  imports: [UsersComponent],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss'
 })
 export class HomePageComponent implements OnInit{
   profiles: Profile[] = [];
+  users: User[] = [];
 
-  constructor(private pService:ProfilesService) {}
+  constructor(private uService:UsersService) {}
 
   ngOnInit(): void {
-      this.pService.setProfiles().subscribe({
-        next: (profiles: Profile[]) => {
-          this.profiles = profiles
+      this.uService.setUsers().subscribe({
+        next: (users: User[]) => {
+          this.users = users
         },
         error: (error) => {
-          console.error('Error fetching profiles', error)
+          console.error('Error fetching users', error)
         }
       })
   }
